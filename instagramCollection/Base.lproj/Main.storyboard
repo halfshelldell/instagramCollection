@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8vH-es-Lxe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="FBu-aN-jXR">
+            <objects>
+                <collectionViewController id="8vH-es-Lxe" customClass="CollectionViewController" customModule="instagramCollection" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3ek-Ee-S6k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="afo-x9-GgA">
+                            <size key="itemSize" width="375" height="670"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="T9U-bi-oIt" customClass="CollectionViewCell" customModule="instagramCollection" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H9o-sn-5Mz">
+                                            <rect key="frame" x="20" y="20" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBY-Mx-ltf">
+                                            <rect key="frame" x="106" y="45" width="195" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVY-Dl-YqW">
+                                            <rect key="frame" x="309" y="34" width="46" height="39"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="more"/>
+                                        </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B6f-LK-oCj">
+                                            <rect key="frame" x="0.0" y="98" width="375" height="475"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OD-Jo-GVP">
+                                            <rect key="frame" x="13" y="583" width="38" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="like"/>
+                                            <connections>
+                                                <action selector="likeButton:" destination="8vH-es-Lxe" eventType="touchUpInside" id="b7H-xn-YL4"/>
+                                                <action selector="likeButton:" destination="T9U-bi-oIt" eventType="touchUpInside" id="lKu-G9-Gb0"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEW-7L-aOS">
+                                            <rect key="frame" x="46" y="578" width="44" height="47"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="comment"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5A8-X9-2z8">
+                                            <rect key="frame" x="292" y="576" width="63" height="51"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="save"/>
+                                            <connections>
+                                                <action selector="saveButton:" destination="8vH-es-Lxe" eventType="touchUpInside" id="WR6-ke-XoT"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddu-Jp-afF">
+                                            <rect key="frame" x="20" y="629" width="335" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxw-Ce-T6d">
+                                            <rect key="frame" x="88" y="587" width="36" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" backgroundImage="send"/>
+                                            <connections>
+                                                <action selector="sendButton:" destination="8vH-es-Lxe" eventType="touchUpInside" id="ZsP-wf-J4n"/>
+                                                <action selector="sendButton:" destination="T9U-bi-oIt" eventType="touchUpInside" id="rqm-dW-h4H"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="DescriptionLabel" destination="Ddu-Jp-afF" id="Xoq-bh-T3g"/>
+                                    <outlet property="MoreButtonOutlet" destination="gVY-Dl-YqW" id="E8a-K1-YBV"/>
+                                    <outlet property="ProfileImageView" destination="H9o-sn-5Mz" id="W6g-lj-gAx"/>
+                                    <outlet property="ProfileUserNameLabel" destination="FBY-Mx-ltf" id="bEj-FA-a7I"/>
+                                    <outlet property="ShareImageView" destination="B6f-LK-oCj" id="Kyj-cQ-svS"/>
+                                    <outlet property="descriptionLabel" destination="Ddu-Jp-afF" id="GDZ-LC-UsK"/>
+                                    <outlet property="moreButtonOutlet" destination="gVY-Dl-YqW" id="LqH-tT-2KO"/>
+                                    <outlet property="profileImageView" destination="H9o-sn-5Mz" id="dpK-Xk-w0t"/>
+                                    <outlet property="profileUserNameLabel" destination="FBY-Mx-ltf" id="aJD-8m-h5p"/>
+                                    <outlet property="shareImageView" destination="B6f-LK-oCj" id="dm5-qU-ZYH"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="8vH-es-Lxe" id="pTf-Ja-wfs"/>
+                            <outlet property="delegate" destination="8vH-es-Lxe" id="4hu-aA-8Ss"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLl-Og-yyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="-85.907046476761622"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="comment" width="128" height="128"/>
+        <image name="like" width="128" height="128"/>
+        <image name="more" width="128" height="128"/>
+        <image name="save" width="128" height="128"/>
+        <image name="send" width="128" height="128"/>
+    </resources>
+</document>
